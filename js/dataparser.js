@@ -621,7 +621,7 @@ class DataParser {
                         console.log("arff found " + key);
                         var rleReader;
                         if(!value2.initialized){
-                            var rlePath  = AssetManager.relativePaths + "tle/" + `tle${AssetManager.paddy(value2.fileNum, 5)}.rle`;
+                            var rlePath  = AssetManager.relativePaths + "Tle/" + `tle${AssetManager.paddy(value2.fileNum, 5)}.rle`;
                             rleReader = new RLEReader(rlePath);
                             await rleReader.readRle(rlePath);
                             console.log("arf LST  initialized header " + key2);
