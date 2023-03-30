@@ -146,7 +146,7 @@ class AssetManager {
                 //    if (!(AssetManager.requiredTileNames.indexOf(`tle${AssetManager.paddy(tileLST.fileNum, 5)}-${tileLST.index}`) > - 1)) {
                 //        AssetManager.requiredTileNames.push(`tle${AssetManager.paddy(tileLST.fileNum, 5)}-${tileLST.index}`);
                 //    }
-                    var rlePath  = AssetManager.relativePaths + "tle/" + `tle${AssetManager.paddy(tileLST.fileNum, 5)}.rle`;
+                    var rlePath  = AssetManager.relativePaths + "Tle/" + `tle${AssetManager.paddy(tileLST.fileNum, 5)}.rle`;
                     rleReader = new RLEReader(rlePath);
                     await rleReader.readRle(rlePath);
                     console.log("LST  initialized header " + rmd.tileNumber);
