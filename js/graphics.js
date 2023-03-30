@@ -584,7 +584,7 @@ async function webGLStart() {
     
     //var tileTextureMap = dp.waveFunctionCollapse(mapSize,mapSize);
     floorTileTextureInfo = {mixes: dp.mixes, notMixes: dp.notMixes, tileTextureMap: {}, atlasWidth: floorTex.width, atlasHeight: floorTex.height, textureCoordMap: floorTex.textureCoordMap, maxAtlas: floorTex.maxAtlas};
-    mapGenWorker = new Worker('js/mapgen.js', { type: "module" });
+    mapGenWorker = new Worker('/pwa/js/mapgen.js', { type: "module" });
     mapGenWorker.onmessage = (event) => {
         console.log("got message " + event.data.length + " " + event.data[0]);
         console.log(event);
@@ -913,7 +913,7 @@ async function makeMap(mapNum){
         floorTileTextureInfo.maxAtlas = floorTex.maxAtlas;
 
         mapGenWorker.terminate();
-        mapGenWorker = new Worker('js/mapgen.js', { type: "module" });
+        mapGenWorker = new Worker('/pwa/js/mapgen.js', { type: "module" });
         mapGenWorker.onmessage = (event) => {
             if(event.data[0] == "buildComplete"){
                 buildComplete=true;
@@ -945,7 +945,7 @@ document.getElementById("stopGenerating").addEventListener('click', ()=>{
     console.log("stopping build");
     mapGenWorker.postMessage(["stopBuildTextureAtlas"]);
     mapGenWorker.terminate();
-    mapGenWorker= new Worker('js/mapgen.js', { type: "module" });
+    mapGenWorker= new Worker('/pwa/js/mapgen.js', { type: "module" });
     mapGenWorker.onmessage = (event) => {
         if(event.data[0] == "buildComplete"){
             buildComplete=true;
