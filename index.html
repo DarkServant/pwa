@@ -1,0 +1,235 @@
+<!doctype html >
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width,  initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dungeon Editor</title>
+        <base href="/">  
+        <link rel="manifest" id="manifestPlaceholder" href="manifest.json">
+        <link rel="stylesheet"  href="style/main.css">
+    </head>
+    <body>
+        <div id="app" class="flex-container" style="width:100%;height:100%;">
+            <div class="flex-stretch">
+                <div id="spinner"></div>
+                <p>
+                    The lagging of the spinner indicates that the main thread is blocked.
+                </p>
+                <div id="appstorage">
+
+                </div>
+                <div id="persisted">
+
+                </div>
+                <div class="grid-container">
+                    <div class="grid1">Map</div><div class="grid1"><select id="map">
+                            <option value="Map00000.rmm" >0:Backyard</option>
+                            <option value="Map00001.rmm">1:Street 1</option>
+                            <option value="Map00002.rmm" >2:Junkyard</option>
+                            <option value="Map00003.rmm" selected>3:Downtown 1</option>
+                            <option value="Map00021.rmm" >21:Street 2</option>
+                            <option value="Map00029.rmm">29:Street 3</option>
+                            <option value="Map00036.rmm">36:Sahara 1</option>
+                            <option value="Map00037.rmm">37:Downtown 2</option>
+                            <option value="Map00038.rmm">38:Downtown 3</option>
+                            <option value="Map00039.rmm">39:Downtown 4</option>
+                            <option value="Map00041.rmm">41:Event Map 1</option>
+                            <option value="Map00042.rmm">42:Event Map 2</option>
+                            <option value="Map00043.rmm">43:TV Studio </option>
+                            <option value="Map00044.rmm">44:TV Studio 1</option>
+                            <option value="Map00045.rmm">45:TV Studio 2</option>
+                            <option value="Map00046.rmm">46:TV Studio 3</option>
+                            <option value="Map00068.rmm">68:Beginner's Zone</option>
+                            <option value="Map00071.rmm">71:Sahara 2</option>
+                            <option value="Map00072.rmm" >72:Sahara Dungeon 1</option>
+                            <option value="Map00076.rmm">76:Sahara Dungeon 2</option>
+                            <option value="Map00077.rmm" >77:Boss Spy Dungeon</option>
+                            <option value="Map00079.rmm">79:Himalayas</option>
+                            <option value="Map00083.rmm">83:Himalayan Dungeon 1</option>
+                            <option value="Map00084.rmm">84:Himalayan Dungeon 2</option>
+                            <option value="Map00085.rmm">85:Himalayan Dungeon 3</option>
+                            <option value="Map00086.rmm">86:Himalayan Dungeon 4</option>
+                            <option value="Map00087.rmm">87:Dokdo Island</option>
+                            <option value="Map00088.rmm">88:Spaceship</option>
+                            <option value="Map00093.rmm">93:SignusAX-1</option>
+                            <option value="Map00094.rmm">94:SignusBX-1</option>
+                            <option value="Map00095.rmm">95:SignusCX-1</option>
+                            <option value="Map00096.rmm">96:SignusDX-1</option>
+                            <option value="Map00131.rmm">131:HQ</option>
+                            <option value="Map00132.rmm">132:Battle Dimension 1</option>
+                            <option value="Map00133.rmm">133:Battle Dimension 2</option>
+                            <option value="Map00134.rmm">134:Battle Dimension 3</option>
+                            <option value="Map00135.rmm">135:Battle Dimension 4</option>
+                            <option value="Map00136.rmm">136:Battle Dimension 5</option>
+                            <option value="Map00137.rmm">137:Uni</option>
+                            <option value="Map00138.rmm">138:Anatu</option>
+                            <option value="Map00139.rmm">139:Bau</option>
+                            <option value="Map00140.rmm">140:Cyrn</option>
+                            <option value="Map00141.rmm">141:Dyaus</option>
+                            <option value="Map00177.rmm">177:School Dungeon</option>
+                            <option value="Map00178.rmm">178:School Dungeon</option>
+                            <option value="Map00179.rmm">179:School Dungeon</option>
+                            <option value="Map00182.rmm">182:Junk Yard</option>
+                            <option value="Map00183.rmm">183:Junk Yard</option>
+                            <option value="Map00184.rmm">184:Sahara</option>
+                            <option value="Map00185.rmm">185:Sahara</option>
+                            <option value="Map00186.rmm">186:Space Ship</option>
+                            <option value="Map00187.rmm">187:Himalays</option>
+                            <option value="Map00188.rmm">188:Uni</option>
+                            <option value="Map00189.rmm">189:Sky Dun??</option>
+                            <option value="Map00190.rmm">190:Sky Dun2??</option>
+                            <option value="Map00191.rmm">191:Broken</option>
+                            <option value="Map00192.rmm">192:Skun Dun2??</option>
+                            <option value="Map00193.rmm">193:Skun Dun2??</option>
+                            <option value="Map00194.rmm">194:Skun Dun2??</option>
+                            <option value="Map00195.rmm">195:Skun Dun2??</option>
+                            <option value="Map00196.rmm">196:Skun Dun3??</option>
+                            <option value="Map00197.rmm">197:Skun Dun3??</option>
+                            <option value="Map00198.rmm">198:Skun Dun3??</option>
+                            <option value="Map00199.rmm">199:Skun Dun2??</option>
+                            <option value="Map00200.rmm">200:Skun Dun2??</option>
+                            <option value="Map00201.rmm">201:Skun Dun2??</option>
+                            <option value="Map00202.rmm">202:Skun Dun2??</option>
+                            <option value="Map00203.rmm">203:Skun Dun2??</option>
+                            <option value="Map00204.rmm">204:School Dungeon</option>
+                            <option value="Map00205.rmm">205:Broken Himalaya</option>
+                            <option value="Map00208.rmm">208:Boss Spy Dungeon</option>
+                            <option value="Map00209.rmm">209:Sahara</option>
+                            <option value="Map00210.rmm">210:Hima Dungeon</option>
+                            <option value="Map00211.rmm">211:School Dungeon</option>
+                            <option value="Map00213.rmm">213:Signus</option>
+                            <option value="Map00214.rmm">214:Signus</option>
+                            <option value="Map00215.rmm">215:Signus</option>
+                            <option value="Map00216.rmm">216:Broken Signus</option>
+                            <option value="Map00217.rmm">217:Broken Signus</option>
+                            <option value="Map00218.rmm">218:Broken Signus</option>
+                            <option value="Map00219.rmm">219:Signus</option>
+                            <option value="Map00220.rmm">220:Sahara</option>
+                            <option value="Map00221.rmm">221:Junkyard</option>
+                            <option value="Map00222.rmm">222:Signus</option>
+                            <option value="Map00223.rmm">223:Signus</option>
+                            <option value="Map00224.rmm">224:Signus</option>
+                            <option value="Map00225.rmm">225:Uni</option>
+                            <option value="Map00226.rmm">226:Uni</option>
+                            <option value="Map00227.rmm">227:Uni</option>
+                            <option value="Map00228.rmm">228:Uni</option>
+                            <option value="Map00229.rmm">229:Uni</option>
+                            <option value="Map00230.rmm">230:sahara</option>
+                            <option value="Map00231.rmm">231:junkyard</option>
+                            <option value="Map00232.rmm">232:junkyard</option>
+                            <option value="Map00233.rmm">233:sahara</option>
+                            <option value="Map00234.rmm">234:backyard</option>
+                            <option value="Map00300.rmm">300:signus</option>
+                            <option value="Map00305.rmm">305:Broken signus</option>
+                            <option value="Map00311.rmm">311:school dun</option>
+                            <option value="Map00312.rmm">312:space ship</option>
+                            <option value="Map00313.rmm">313:space ship</option>
+                            <option value="Map00314.rmm">314:space ship</option>
+                            <option value="Map00315.rmm">315:space ship</option>
+                            <option value="Map00316.rmm">316:space ship</option>
+                    </select></div>
+                    <div class="grid1">Map Size</div><div class="grid1"><input id="mapSize" maxlength="4" size="4" value="50"></input></div>
+                    <div class="grid1">Wall Height</div><div class="grid1"><input id="wallHeight" maxlength="4" size="4" value="10"></input></div>
+                    <div class="grid1">Large Rooms</div><div class="grid1"><input id="largeRooms" maxlength="4" size="4" value="21"</input></div>
+                    <div class="grid1">Medium Rooms</div><div class="grid1"><input id="mediumRooms" maxlength="4" size="4" value="10"></input></div>
+                    <div class="grid1">Small Rooms</div><div class="grid1"><input id="smallRooms" maxlength="4" size="4" value="6"></input></div>
+                    <div class="footer"><button id="regenerateMap">regenerate map</button></div>
+                    <div class="footer"><button id="stopGenerating">stop generating map</button></div>
+                    
+                </div>
+            </div>
+            <div id ="rightcontainer"  class="flex-stretch" style="flex:1">
+                <canvas id="mainviewport" ></canvas>
+            </div>
+        </div> 
+        <script>
+            const spinner = document.getElementById('spinner');
+            var turn = 0;
+            setInterval(() => {
+                turn = (turn + .015) % 1;
+                spinner.style.transform = 'rotate(' + turn + 'turn)';
+            }, 10);
+        </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').
+                then(function (registration) {
+                    // Registration was successful``
+                    console.log('ServiceWorker registration successful with scope: ', 
+            registration.scope);
+                }).catch(function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            }
+            navigator.storage.estimate().then(function(estimate) {
+                const percentUsed = Math.round(estimate.usage / estimate.quota * 100);
+                const usageInMib = Math.round(estimate.usage / (1024 * 1024));
+                const quotaInMib = Math.round(estimate.quota / (1024 * 1024));
+                const details = usageInMib + " out of " + quotaInMib + " MiB used " + percentUsed;
+                document.getElementById("appstorage").innerHTML = details;
+            });
+            if ('storage' in navigator && 'persisted' in navigator.storage) {
+                const isPersisted =  navigator.storage.persist();
+                navigator.storage.persisted()
+                .then(persisted => {
+                    document.getElementById('persisted').innerHTML = persisted ? 'persisted' : 'not persisted';
+                    
+                    console.log(persisted ? 'persisted' : 'not persisted');
+                });
+            }else{
+                console.log('no persist');
+            }
+
+        </script>
+        <script id="shader-fs" type="x-shader/x-fragment">
+            precision mediump float;
+
+            varying vec4 vColor;
+            varying vec2 vTextureCoord;
+
+            uniform sampler2D uSampler;
+            void main(void)
+            {
+            gl_FragColor=texture2D(uSampler,vTextureCoord);
+            //gl_FragColor=vColor;
+            }
+        </script>
+
+        <script id="shader-vs" type="x-shader/x-vertex">
+            attribute vec3 aVertexPosition;
+            attribute vec4 aVertexColor;
+
+            attribute vec2 aTextureCoord;
+
+            uniform mat4 uMVMatrix;
+            uniform mat4 uPMatrix;
+
+            varying vec4 vColor;
+            varying vec2 vTextureCoord;
+
+            void main(void)
+            {
+            gl_Position=uPMatrix * uMVMatrix * vec4(aVertexPosition,1.0);
+            vTextureCoord=aTextureCoord;
+            vColor=aVertexColor;
+            }
+        </script>
+
+        <script src="js/gl-matrix.js" type="text/javascript"></script>
+        <script src="js/webgl-3d-math.js" type="text/javascript"></script>
+        <script src="js/webgl-utils.js" type="text/javascript"></script>
+        <script src="js/priorityqueue.js" type="module"></script>
+        <script src="js/mapgen.js" type="module"></script>
+        <script src="js/datareader.js" type="module"></script>
+        <script src="js/rleReader.js" type="module"></script>
+        <script src="js/listReader.js" type="module"></script>
+        <script src="js/rmdReader.js" type="module"></script>
+        <script src="js/mapReader.js" type="module"></script>
+        <script src="js/dataparser.js" type="module"></script>
+        <script src="js/gamemap.js" type="module"></script>
+        <script src="js/graphics.js" type="module"></script>
+    </body>
+</html>
