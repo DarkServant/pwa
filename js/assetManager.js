@@ -38,7 +38,7 @@ class AssetManager {
     static tleFiles = {};
 
     static relativePaths;
-    static async init(relativePath = "./data/RLEs/") {
+    static async init(relativePath = "/pwa/Redmoon/RLEs/") {
         //let vm = this;
         AssetManager.relativePaths = relativePath;
         AssetManager.virtualTileDictionary = {};
@@ -111,7 +111,7 @@ class AssetManager {
             if (!AssetManager.tileData[pRmdNumber + '_' + pRmdIndex]) { // ${rmdObj.rmdNum}_${z}
                 let tileReader = new RMDReader();
 
-                tileReader.init(`../Redmoon/DATAs/Tle/tle${AssetManager.paddy(pRmdNumber, 5)}.rmd`, 0); 
+                tileReader.init(`/pwa/Redmoon/DATAs/Tle/tle${AssetManager.paddy(pRmdNumber, 5)}.rmd`, 0); 
                 await tileReader.loadRMD(); // returns values back to rmdList below
             }
 
@@ -172,7 +172,7 @@ class AssetManager {
 
                 let tileReader = new RMDReader();
 
-                tileReader.init(`../Redmoon/DATAs/Obj/obj${AssetManager.paddy(rmdFileNumber, 5)}.rmd`, 1);
+                tileReader.init(`/pwa/Redmoon/DATAs/Obj/obj${AssetManager.paddy(rmdFileNumber, 5)}.rmd`, 1);
                 await tileReader.loadRMD();
             }
 

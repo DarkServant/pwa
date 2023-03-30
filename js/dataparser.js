@@ -344,14 +344,14 @@ class DataParser {
     async init(){
         console.log("init started");
         RLEReader.init();
-        await AssetManager.init("../Redmoon/RLEs/");
+        await AssetManager.init("/pwa/Redmoon/RLEs/");
         console.log("init finished");
     }
 
     async readmap(mapNumber){
 
         this.gamemap = new MapReader();
-        await this.gamemap.readMap(`../Redmoon/DATAs/Map/${mapNumber}`);
+        await this.gamemap.readMap(`/pwa/Redmoon/DATAs/Map/${mapNumber}`);
         console.log("map read finished");
     }
 
