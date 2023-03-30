@@ -29,34 +29,34 @@ self.addEventListener('install', event => {
 const fafe =333;
 const CACHE_STATIC_NAME = 'static';
 var URLS_TO_PRECACHE = [
-    '/',
-    '/manifest.json',
-    '/icons/icon-512.png',
-    '/style/main.css',
-    '/js/graphics.js',
-    '/js/gl-matrix-min.js',
-    '/js/gl-matrix.js',
-    '/js/socket.io.js',
-    '/js/webgl-3d-math.js',
-    '/js/webgl-utils.js',
-    '/images/galaxy.png',
-    '/images/0_layer_16_uniquemegaatlas.bmp',
-    '/images/1_layer_16_uniquemegaatlas.bmp',
-    '/images/2_layer_16_uniquemegaatlas.bmp',
-    '/images/3_layer_16_uniquemegaatlas.bmp',
-    '/images/4_layer_16_uniquemegaatlas.bmp',
-    '/images/5_layer_16_uniquemegaatlas.bmp',
-    '/images/6_layer_16_uniquemegaatlas.bmp',
-    '/images/7_layer_16_uniquemegaatlas.bmp',
-    '/images/8_layer_16_uniquemegaatlas.bmp',
-    '/Redmoon/DATAs/Map/Map00072.rmm',
-    '/Redmoon/RLEs/int.lst',
-    '/Redmoon/RLEs/bul.lst',
-    '/Redmoon/RLEs/tle.lst',
-    '/Redmoon/RLEs/snd.lst',
-    '/Redmoon/RLEs/obj.lst',
-    '/Redmoon/RLEs/ico.lst',
-    '/Redmoon/RLEs/Chr/etc.lst',
+    '/pwa/',
+    '/pwa/manifest.json',
+    '/pwa/icons/icon-512.png',
+    '/pwa/style/main.css',
+    '/pwa/js/graphics.js',
+    '/pwa/js/gl-matrix-min.js',
+    '/pwa/js/gl-matrix.js',
+    '/pwa/js/socket.io.js',
+    '/pwa/js/webgl-3d-math.js',
+    '/pwa/js/webgl-utils.js',
+    '/pwa/images/galaxy.png',
+    '/pwa/images/0_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/1_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/2_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/3_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/4_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/5_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/6_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/7_layer_16_uniquemegaatlas.bmp',
+    '/pwa/images/8_layer_16_uniquemegaatlas.bmp',
+    '/pwa/Redmoon/DATAs/Map/Map00072.rmm',
+    '/pwa/Redmoon/RLEs/int.lst',
+    '/pwa/Redmoon/RLEs/bul.lst',
+    '/pwa/Redmoon/RLEs/tle.lst',
+    '/pwa/Redmoon/RLEs/snd.lst',
+    '/pwa/Redmoon/RLEs/obj.lst',
+    '/pwa/Redmoon/RLEs/ico.lst',
+    '/pwa/Redmoon/RLEs/Chr/etc.lst',
 ];
 
 function paddy(n, p, c = '0') {
@@ -64,12 +64,12 @@ function paddy(n, p, c = '0') {
 }
 
 for(var i=1;i<276;i++){
-  var str = `Redmoon/DATAs/Tle/tle${paddy(i, 5)}.rmd`;
+  var str = `/pwa/Redmoon/DATAs/Tle/tle${paddy(i, 5)}.rmd`;
   URLS_TO_PRECACHE.push(str);
 }
 
 for(var i=0;i<10;i++){
-  var str = `Redmoon/RLEs/Chr/c0${i}.lst`;
+  var str = `/pwa/Redmoon/RLEs/Chr/c0${i}.lst`;
   URLS_TO_PRECACHE.push(str)
 }
 
